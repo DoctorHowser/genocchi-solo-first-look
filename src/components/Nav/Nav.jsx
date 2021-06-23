@@ -39,6 +39,18 @@ function Nav() {
         <Link className="navLink" to="/about">
           About
         </Link>
+
+        {user.id &&  
+          <Link className="navLink" to="/pets">
+            Pets
+          </Link>
+        }
+
+        {user.access_level > 0 &&
+          <Link className="navLink" to="/pets/new">
+            Create Pet
+          </Link>
+        }
       </div>
     </div>
   );
